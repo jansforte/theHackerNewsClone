@@ -9,6 +9,14 @@ const Header = ()=>{
         $("#buscador").slideToggle("fast");
     }
 
+    const openMenuClose = (estado)=>{
+        if (estado) {
+            $(".h-menu").css("height", "100%");
+        }else{
+            $(".h-menu").css("height", "0%");
+        }
+    }
+
     useEffect(openSearch, []);
 
     return (
@@ -44,7 +52,7 @@ const Header = ()=>{
                         <MDBCol size='1' className="botonMenuBuscar btnSear" onClick={openSearch}>
                             <MDBIcon fas icon="search" />
                         </MDBCol>
-                        <MDBCol size='1' className="botonMenuBuscar btnM">
+                        <MDBCol size='1' className="botonMenuBuscar btnM" onClick={()=>openMenuClose(true)}>
                             <MDBIcon fas icon="bars" />
                         </MDBCol>
                         <MDBCol size='5'>
@@ -67,7 +75,7 @@ const Header = ()=>{
                     <li className="l1"><a href='#'>Contact</a></li>
                     <li className="l1 l2">
                         <ul className="menu1">
-                            <li className="l2 bar" ><a href='#'><MDBIcon fas icon="bars" /></a></li>
+                            <li className="l2 bar" ><a href='#' onClick={()=>openMenuClose(true)}><MDBIcon fas icon="bars" /></a></li>
                             <li className="l2 lupa"><a href='#' onClick={openSearch}><MDBIcon fas icon="search" /></a></li>
                         </ul>
                     </li>
@@ -83,6 +91,36 @@ const Header = ()=>{
                     <form>
                         <input type="text" placeholder="Search here..." name="search" autoComplete="off"/>
                     </form>
+                </div>
+            </div>
+            <div className="h-menu">
+                <div className="h-menu-container">
+                    <div className="d-close">
+                        <a href="#" onClick={()=>openMenuClose(false)}>
+                            <MDBIcon fas icon="times" size="2x"/>
+                        </a>
+                    </div>
+                    <div style={{padding:"10px", overflow: "hidden"}}>
+                        <div className="h-m-op1">
+                            <h5>Resources</h5>
+                            <ul>
+                                <li><a href="#">THN Store</a></li>
+                                <li><a href="#">Free Books</a></li>
+                                <li><a href="#">Freebies</a></li>
+                                <li><a href="#">RSS Feeds</a></li>
+                            </ul>
+                        </div>
+                        <div className="h-m-op2">
+                            <h5>About Site</h5>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Advertise With Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5>Contact/Tip Us</h5>
                 </div>
             </div>
         </>

@@ -142,6 +142,67 @@ nav, .content-main, .article-news{
    border: 1px solid #ddd;
 }
 
+.h-menu{
+   height: 0%;
+   width: 100%;
+   bottom: 0;
+   position: fixed;
+   z-index:1;
+   background-color: #395697;
+   background: linear-gradient(0deg,rgba(57,86,151,1) 0,rgba(19,42,93,1) 100%);
+   overflow-x: hidden;
+   transition: 0.5s;
+}
+
+.h-menu-container{
+   color:#e9e9e9;
+   max-width: 700px;
+   margin: 0 auto;
+   padding: 5px 25px;
+   text-align: center;
+}
+
+.h-menu-container .d-close{
+   text-align: right;
+   line-height: 1em;
+}
+
+.d-close a,.d-close a:hover{
+   color: #fff;
+   text-decoration: none;
+}
+
+.h-m-op1,.h-m-op2{
+   text-align: left;
+   float: left;
+   width: 50%;
+   padding: 15px;
+}
+
+.h-m-op1 h5,.h-m-op2 h5{
+   font-size: 17px;
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+
+.h-m-op1 ul,.h-m-op2 ul{
+   list-style: none;
+   text-decoration: unset;
+   padding-left: 0px;
+}
+.h-m-op1 li a,.h-m-op2 li a{
+   margin-bottom: 3px;
+   color:#c0d2fe;
+}
+
+.h-menu-container >h5{
+   font-size: 17px;
+   font-weight: 500;
+   margin-bottom: 10px;
+   padding: 15px 25px;
+   text-align: left;
+}
+
 .newNews{
    float: left;
    width: calc(100% - 300px);
