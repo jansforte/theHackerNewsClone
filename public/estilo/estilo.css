@@ -143,7 +143,7 @@ nav, .content-main, .article-news{
 }
 
 .h-menu{
-   height: 0%;
+   height: 0;
    width: 100%;
    bottom: 0;
    position: fixed;
@@ -188,7 +188,7 @@ nav, .content-main, .article-news{
 .h-m-op1 ul,.h-m-op2 ul{
    list-style: none;
    text-decoration: unset;
-   padding-left: 0px;
+   padding-left: 0;
 }
 .h-m-op1 li a,.h-m-op2 li a{
    margin-bottom: 3px;
